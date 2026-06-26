@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Environmental Monitor</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Firebase Compat Libraries -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Environmental Monitor Panel</h1>
+    <p>Live feed from ESP8266 IoT Device</p>
+  </header>
+
+  <main class="dashboard-container">
+    <!-- Temperature Card -->
+    <div class="card" id="temp-card">
+      <h3>Temperature</h3>
+      <div class="value"><span id="temp-val">--</span>°C</div>
+    </div>
+
+    <!-- Humidity Card -->
+    <div class="card" id="hum-card">
+      <h3>Humidity</h3>
+      <div class="value"><span id="hum-val">--</span>%</div>
+    </div>
+
+    <!-- Air Quality Card -->
+    <div class="card" id="gas-card">
+      <h3>Air Quality (Gas)</h3>
+      <div class="value"><span id="gas-val">--</span> PPM</div>
+    </div>
+  </main>
+
+  <section class="system-status">
+    <h3>System Status Indicator</h3>
+    <div id="status-indicator" class="indicator green">Normal Operation</div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
